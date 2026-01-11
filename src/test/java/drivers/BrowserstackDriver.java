@@ -18,8 +18,8 @@ public class BrowserstackDriver implements WebDriverProvider {
     public WebDriver createDriver(Capabilities capabilities) {
         MutableCapabilities caps = new MutableCapabilities();
 
-        String user = System.getProperty("user", "default_user");
-        String key = System.getProperty("key", "default_key");
+        String user = System.getProperty("user");
+        String key = System.getProperty("key");
 
         caps.setCapability("browserstack.user", user);
         caps.setCapability("browserstack.key", key);
