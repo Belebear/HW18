@@ -4,17 +4,10 @@ import org.aeonbits.owner.Config;
 import org.aeonbits.owner.Config.Sources;
 
 @Sources({
-        //"classpath:${device}.properties",
         "classpath:android.properties"
 })
 
 public interface WikiTestConfig extends Config {
-
-    @Key("browserstack.user")
-    String browserstackUser();
-
-    @Key("browserstack.key")
-    String browserstackKey();
 
     @Key("appName")
     String appName();
