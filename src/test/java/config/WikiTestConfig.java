@@ -9,10 +9,10 @@ import org.aeonbits.owner.Config.Sources;
 
 public interface WikiTestConfig extends Config {
 
-    @Key("appName")
+    @Key("app.name")
     String appName();
 
-    @Key("deviceName")
+    @Key("device.name")
     String deviceName();
 
     @Key("android.version")

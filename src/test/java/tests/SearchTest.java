@@ -1,18 +1,18 @@
 package tests;
 
-import Pages.SearchPage;
+import screen.SearchScreen;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class SearchTest extends TestBase {
-    SearchPage searchPage = new SearchPage();
+    SearchScreen searchScreen = new SearchScreen();
     private final String search = "java";
 
 
     @Test
     @DisplayName("Проверка сущесвтования результатов при поиске")
     void searchTest() {
-        searchPage.clickFirstSearchInput()
+        searchScreen.clickFirstSearchInput()
                 .sendRequestSecondSearchInput(search)
                 .checkNotNullContent();
     }
@@ -21,7 +21,7 @@ public class SearchTest extends TestBase {
     @Test
     @DisplayName("Откртие статьи")
     void openArticleTest() {
-        searchPage.clickFirstSearchInput()
+        searchScreen.clickFirstSearchInput()
                 .sendRequestSecondSearchInput(search)
                 .clickFirstArtical()
                 .errorIsDisplayed();
